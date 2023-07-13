@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<title>İndex Title</title>
+</head>
+<body>
+<section>
+
+
+<div class="container mt-3" >
+  
+  <h2 class="mt-5">Diyetisyen</h2>
+  <h2  th:text="${program.danisan?.insertedDiyetisyen?.getFirstName().concat(' '+program.danisan?.insertedDiyetisyen?.getLastName())} "></h2>
+
+
+  <form th:action="@{/program_danisan}" th:object = "${program}" method="POST">
+  <div class="table-responsive">
+    <table class="table table-bordered table table-hover  mt-5">
+      <thead class="table-dark">
+        <tr>
+          <th th:text = "${program.danisan?.getFirstName().concat(' '+program.danisan?.getLastName())}"></th>
+          <th>Pazartesi</th>
+          <th>Salı</th>
+          <th>Çarşamba</th>
+          <th>Perşembe</th>
+          <th>Cuma</th>
+          <th>Cumartesi</th>
+          <th>Pazar</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr><td>SABAH</td><td th:text="${program.icerik1}"></td><td th:text="${program.icerik4}"></td><td th:text="${program.icerik7}"></td><td th:text="${program.icerik10}"></td><td th:text="${program.icerik13}"></td><td th:text="${program.icerik16}"></td><td th:text="${program.icerik19}"></td></tr>
+        <tr><td>ÖĞLE</td><td th:text="${program.icerik2}"></td><td th:text="${program.icerik5}"></td><td th:text="${program.icerik8}"></td><td th:text="${program.icerik11}"></td><td th:text="${program.icerik14}"></td><td th:text="${program.icerik17}"></td><td th:text="${program.icerik20}"></td></tr>
+        <tr><td>AKŞAM</td><td th:text="${program.icerik3}"></td><td th:text="${program.icerik6}"></td><td th:text="${program.icerik9}"></td><td th:text="${program.icerik12}"></td><td th:text="${program.icerik15}"></td><td th:text="${program.icerik18}"></td><td th:text="${program.icerik21}"></td></tr>
+  
+      </tbody>
+    </table>
+  </div>
+  </form>
+</div>
+
+
+ 
+</section>
+
+
+</body>
+</html>

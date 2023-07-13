@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<title>İndex Title</title>
+</head>
+<body>
+	<section class="h-100 h-custom">
+		<div class="container py-5 h-100">
+			<div
+				class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col-lg-8 col-xl-6">
+					<div class="card rounded-3">
+						<img src="https://mdbcdn.b-cdn.net/img/new/slides/026.webp"
+							class="w-100"
+							style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+							alt="Sample photo">
+						<div class="card-body p-4 p-md-5">
+							<h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-0">Program Kayıt
+								Formu</h3>
+							<form class="px-md-0"
+								th:action="@{/program_yaz/{id}(id=${program.danisan?.getId()})}"
+								th:object="${program}" method="POST">
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Pazartesi_Sabah" type="text" name="icerik1"
+										th:field="*{icerik1}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Pazartesi_Oglen" type="text" name="icerik2"
+										th:field="*{icerik2}" class="form-control" />
+								</div>
+
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Pazartesi_Aksam" type="text" name="icerik3"
+										th:field="*{icerik3}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Salı_Sabah" type="text" name="icerik4"
+										th:field="*{icerik4}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Salı_Oglen" type="text" name="icerik5"
+										th:field="*{icerik5}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Salı_Aksam" type="text" name="icerik6"
+										th:field="*{icerik6}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Çarşamba_Sabah" type="text" name="icerik7"
+										th:field="*{icerik7}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Çarşamba_Oglen" type="text" name="icerik8"
+										th:field="*{icerik8}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Çarşamba_Aksam" type="text" name="icerik9"
+										th:field="*{icerik9}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Perşembe_Sabah" type="text" name="icerik10"
+										th:field="*{icerik10}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Perşembe_Oglen" type="text" name="icerik11"
+										th:field="*{icerik11}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Perşembe_Aksam" type="text" name="icerik12"
+										th:field="*{icerik12}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Cuma_Sabah" type="text" name="icerik13"
+										th:field="*{icerik13}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Cuma_Oglen" type="text" name="icerik14"
+										th:field="*{icerik14}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Cuma_Aksam" type="text" name="icerik15"
+										th:field="*{icerik15}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Cumartesi_Sabah" type="text" name="icerik16"
+										th:field="*{icerik16}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Cumartesi_Oglen" type="text" name="icerik17"
+										th:field="*{icerik17}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Cumartesi_Aksam" type="text" name="icerik18"
+										th:field="*{icerik18}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Pazar_Sabah" type="text" name="icerik19"
+										th:field="*{icerik19}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Pazar_Oglen" type="text" name="icerik20"
+										th:field="*{icerik20}" class="form-control" />
+								</div>
+								<div class="form-outline ">
+									<label class="form-label" for="form3Example1q"></label> <input
+										placeholder="Pazar_Aksam" type="text" name="icerik21"
+										th:field="*{icerik21}" class="form-control" />
+								</div>
+
+								<div>
+									<button type="submit" class="btn btn-success btn-lg mt-4">Submit</button>
+								</div>
+							</form>
+						</div>
+
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+
+	</section>
+
+
+</body>
+</html>

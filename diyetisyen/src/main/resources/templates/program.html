@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<title>İndex Title</title>
+</head>
+<body>
+<section>
+
+
+<div class="container mt-3" >
+  <h2>Responsive Table</h2>
+  <p th:text="${danisan.diyetisyen?.insertedDiyetisyen?.getfirstName()}"></p>
+
+
+  <form th:action="@{/program_yaz}" th:object = "${program}" method="POST">
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th th:text = "${danisan.firstName}"></th>
+          <th>Pazartes</th>
+          <th>Salı</th>
+          <th>Çarşamba</th>
+          <th>Perşembe</th>
+          <th>Cuma</th>
+          <th>Cumartesi</th>
+          <th>Pazar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="t : ${T(com.bilgeadam.diyetisyen.entity.Times).values()}">
+          <td th:text = "${t}"></td>
+          <td th:text = "${program.icerik1}"></td>
+          <td><input 
+                 type="text" 
+                 name="icerik"
+                 th:field="*{icerik2}"
+                 class="form-control" 
+                 /></td>
+          <td><input 
+                 type="text" 
+                 name="icerik"
+                 th:field="*{icerik3}"
+                 class="form-control" 
+                 /></td>
+          <td><input 
+                 type="text" 
+                 name="icerik"
+                 th:field="*{icerik4}"
+                 class="form-control" 
+                 /></td>
+          <td><input 
+                 type="text" 
+                 name="icerik"
+                 th:field="*{icerik}"
+                 class="form-control" 
+                 /></td>
+          <td><input 
+                 type="text" 
+                 name="icerik"
+                 th:field="*{icerik}"
+                 class="form-control" 
+                 /></td>
+          <td><input 
+                 type="text" 
+                 name="icerik"
+                 th:field="*{icerik}"
+                 class="form-control" 
+                 /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </form>
+</div>
+
+
+ 
+</section>
+
+
+</body>
+</html>

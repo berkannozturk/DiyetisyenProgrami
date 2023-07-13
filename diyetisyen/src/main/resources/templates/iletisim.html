@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="tr" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<title>İletişim</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+#contact .card:hover i,#contact .card:hover h4{
+	color: #87d37c;
+}
+</style>
+</head>
+<body style="background-color: #f5fffa;">
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">Leyla Tan Diyetisyen Merkezi</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Ana Sayfa</a>
+        </li>
+        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_DYT')">
+          <a class="nav-link" href="/danisanlar">Danışanlar</a>
+        </li>
+        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_BASDYT')">
+          <a class="nav-link" href="/diyetisyenler">Diyetisyenler</a>
+        </li>
+        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_BASDYT')">
+          <a class="nav-link" href="/dyt_kayit">Diyetisyen Kayıt</a>
+        </li>
+        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_DYT')">
+          <a class="nav-link" href="/danisan_kayit">Danışan Kayıt</a>
+        </li>
+        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_DNS')">
+          <a class="nav-link" href="/program_danisan">Programım</a>
+        </li>
+        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_DYT')">
+          <a class="nav-link" href="/program_dyt">Program Yaz</a>
+        </li>
+        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_DNS')">
+          <a class="nav-link" href="/iletisim">İletişim</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav justify-content-end">
+      	<li class="nav-item" sec:authorize="isAuthenticated()">
+      	<a href="#" class="nav-link" sec:authentication="name">Username</a>
+      </li>
+       <li class="nav-item" sec:authorize="!isAuthenticated()">
+          <a class="nav-link" href="/login">Giriş</a>
+        </li>
+        <li class="nav-item" sec:authorize="isAuthenticated()">
+          <a class="nav-link" href="/logout">Çıkış</a>
+        </li>
+     </ul>
+    </div>
+  </div>
+</nav>
+
+
+ <section id="contact" >
+       <div class="container mt-5">
+           <h3 class="text-center text-uppercase mt-5">Bize Ulaşabilirsiniz</h3>
+           <p class="text-center w-75 m-auto"></p>
+           <div class="row mt-5">
+             <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+               <div class="card border-0 ">
+                  <div class="card-body text-center">
+                    <i class="fa fa-instagram  mb-3" style="font-size:48px" aria-hidden="true"></i>
+                    <h4 class="text-uppercase mb-5">Instagram</h4>
+                    <p>@DiyetisyenLeyla</p>
+                  </div>
+                </div>
+             </div>
+             <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+               <div class="card border-0">
+                  <div class="card-body text-center">
+                    <i class="fa fa-google mb-3" style="font-size:48px" aria-hidden="true"></i>
+                    <h4 class="text-uppercase mb-5">E-mail</h4>
+                   <address>leyla@tan.com</address>
+                  </div>
+                </div>
+             </div>
+             <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+               <div class="card border-0">
+                  <div class="card-body text-center">
+                    <i class="fa fa-map-marker mb-3" style="font-size:48px"  aria-hidden="true"></i>
+                    <h4 class="text-uppercase mb-5">Lokasyon</h4>
+                    <address>Ankara Ümitköy 77/27  </address>
+                  </div>
+                </div>
+             </div>
+             <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+               <div class="card border-0">
+                  <div class="card-body text-center">
+                    <i class="fa fa-whatsapp mb-3" style="font-size:48px" aria-hidden="true"></i>
+                    <h4 class="text-uppercase mb-5">Whatsapp</h4>
+                    <p>(0312)812 55 77</p>
+                  </div>
+                </div>
+             </div>
+           </div>
+       </div>
+    </section>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</body>
+</html>
